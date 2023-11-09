@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.winning-numbers {
+    width: 40px; /* 기본 크기 */
+    height: 40px;
+}
+
+@media (max-width: 600px) {
+    .winning-numbers {
+        width: 30px; /* 화면이 600px 이하일 때 */
+        height: 30px;
+    }
+}
