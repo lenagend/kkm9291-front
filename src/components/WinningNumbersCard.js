@@ -2,19 +2,18 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import {deepOrange, red} from '@mui/material/colors';
+import {red} from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {AvatarGroup, Box, Pagination, Stack} from "@mui/material";
+import {Box, Pagination, Stack} from "@mui/material";
 import '../css/lotto/common.css'
 
 const ExpandMore = styled((props) => {
@@ -40,7 +39,7 @@ export default function WinningNumbersCard() {
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        R
+                        로또
                     </Avatar>
                 }
                 action={
@@ -72,19 +71,24 @@ export default function WinningNumbersCard() {
                 <IconButton aria-label="share">
                     <ShareIcon />
                 </IconButton>
-                <ExpandMore
-                    expand={expanded}
-                    onClick={handleExpandClick}
-                    aria-expanded={expanded}
-                    aria-label="show more"
-                >
-                    <ExpandMoreIcon />
-                </ExpandMore>
+                <Stack direction="row" sx={{marginLeft : 'auto'}}>
+                    <Box sx={{display : 'flex', alignItems : 'center'}}>
+                        <Typography align="justify" variant="body2" sx={{marginLeft : 'auto'}} >더보기</Typography>
+                    </Box>
+                    <ExpandMore
+                        expand={expanded}
+                        onClick={handleExpandClick}
+                        aria-expanded={expanded}
+                        aria-label="show more"
+                    >
+                        <ExpandMoreIcon />
+                    </ExpandMore>
+                </Stack>
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                     <Box>
-                        <Stack spacing={2}>
+                        <Stack spacing={1}>
                             <Typography variant="subtitle2">1092회 (2023년 11월 04일 추첨)</Typography>
                             <Stack direction="row" spacing={{xs: 1, sm :2}} justifyContent="center">
                                 <Avatar className="winning-numbers">7</Avatar>
@@ -141,7 +145,7 @@ export default function WinningNumbersCard() {
                                 <Avatar className="winning-numbers">37</Avatar>
                             </Stack>
                         </Stack>
-                        <Stack justifyContent="center" sx={{mt: 2}}>
+                        <Stack justifyContent="center" alignItems="center" sx={{mt: 2}}>
                             <Pagination count={10} color="primary"/>
                         </Stack>
                     </Box>

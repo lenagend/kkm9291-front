@@ -3,7 +3,7 @@ import WinningNumbersCard from "../components/WinningNumbersCard";
 import RecommendedLottoCard from "../components/RecommendedLottoCard";
 import ButtonMenuCard from "../components/ButtonMenuCard";
 
-const HomePage = () => {
+const Lotto = () => {
     return(
         <Box>
         <Container maxWidth="sm">
@@ -15,4 +15,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage;
+export default Lotto;
