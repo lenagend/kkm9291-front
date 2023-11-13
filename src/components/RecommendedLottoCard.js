@@ -16,6 +16,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {Box, Divider, Fab, FormControl, InputLabel, MenuItem, Select, Stack} from "@mui/material";
 import '../css/lotto/common.css'
 import {AutoFixHighTwoTone} from "@mui/icons-material";
+import LottoNumber from "./LottoNumber";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -54,12 +55,12 @@ export default function RecommendedLottoCard() {
             <CardContent>
                 <Box>
                     <Stack direction="row" spacing={{xs: 1, sm :2}} justifyContent="center">
-                        <Avatar className="winning-numbers">7</Avatar>
-                        <Avatar className="winning-numbers">18</Avatar>
-                        <Avatar className="winning-numbers">19</Avatar>
-                        <Avatar className="winning-numbers">26</Avatar>
-                        <Avatar className="winning-numbers">33</Avatar>
-                        <Avatar className="winning-numbers">45</Avatar>
+                        <LottoNumber number={7} />
+                        <LottoNumber number={18} />
+                        <LottoNumber number={19} />
+                        <LottoNumber number={26} />
+                        <LottoNumber number={33} />
+                        <LottoNumber number={45} />
                     </Stack>
                 </Box>
             </CardContent>
@@ -157,9 +158,6 @@ export default function RecommendedLottoCard() {
                             <Stack spacing={1}>
                                 <Typography variant="subtitle2">생성된 번호</Typography>
                                 <Stack direction="row" spacing={{xs: 1, sm :2}} justifyContent="center">
-                                    <Box sx={{display : 'flex', alignItems : 'center'}}>
-                                      <Typography>1.</Typography>
-                                    </Box>
                                     <Avatar className="winning-numbers">7</Avatar>
                                     <Avatar className="winning-numbers">18</Avatar>
                                     <Avatar className="winning-numbers">19</Avatar>
