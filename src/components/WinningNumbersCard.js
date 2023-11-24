@@ -13,8 +13,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {Box, Pagination, Stack} from "@mui/material";
+import {Box, CircularProgress, Pagination, Stack} from "@mui/material";
 import '../css/lotto/common.css'
+import {useFetchPaginatedData} from "../hooks/useFetchPaginatedData";
+import {useEffect, useState} from "react";
+import LottoNumber from "./LottoNumber";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -29,10 +32,30 @@ const ExpandMore = styled((props) => {
 
 export default function WinningNumbersCard() {
     const [expanded, setExpanded] = React.useState(false);
+    const apiUrl = process.env.REACT_APP_API_URL;
+    const { data: lottoDrawsData, loading } = useFetchPaginatedData(`${apiUrl}/api/lotto`, 0, 5);
+    const [latestDraw, setLatestDraw] = useState(null);
+
+    useEffect(() => {
+        if (lottoDrawsData && lottoDrawsData.content && lottoDrawsData.content.length > 0) {
+            // 최초 로딩 시에만 최신 당첨 번호를 설정
+            setLatestDraw(prevLatestDraw => prevLatestDraw || lottoDrawsData.content[0]);
+            console.log(latestDraw);
+        }
+    }, [lottoDrawsData]);
+
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
+
+    if(loading || !lottoDrawsData){
+        return (
+            <Card sx={{ maxWidth: 'auto', m: 2 }}>
+                <CircularProgress />
+            </Card>
+        );
+    }
 
     return (
         <Card sx={{ maxWidth: 'auto', m: 2 }}>
@@ -47,20 +70,20 @@ export default function WinningNumbersCard() {
                         <MoreVertIcon />
                     </IconButton>
                 }
-                title="이번주 로또6/45 당첨번호"
-                subheader="1092회 (2023년 11월 04일 추첨)"
+                title={`${latestDraw.drawNo}회 당첨번호`}
+                subheader={`(${latestDraw.drawDate} 추첨)`}
             />
             <CardContent>
                 <Box>
                     <Stack direction="row" spacing={{xs: 1, sm :2}} justifyContent="center">
-                        <Avatar className="winning-numbers">7</Avatar>
-                        <Avatar className="winning-numbers">18</Avatar>
-                        <Avatar className="winning-numbers">19</Avatar>
-                        <Avatar className="winning-numbers">26</Avatar>
-                        <Avatar className="winning-numbers">33</Avatar>
-                        <Avatar className="winning-numbers">45</Avatar>
+                        <LottoNumber number={latestDraw.drawNo1} />
+                        <LottoNumber number={latestDraw.drawNo2} />
+                        <LottoNumber number={latestDraw.drawNo3} />
+                        <LottoNumber number={latestDraw.drawNo4} />
+                        <LottoNumber number={latestDraw.drawNo5} />
+                        <LottoNumber number={latestDraw.drawNo6} />
                         <Avatar className="winning-numbers" sx={{ background: 'none', color: 'black'}}>+</Avatar>
-                        <Avatar className="winning-numbers">37</Avatar>
+                        <LottoNumber number={latestDraw.bonusNo} />
                     </Stack>
                 </Box>
             </CardContent>
