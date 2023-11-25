@@ -13,7 +13,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {Box, Divider, Fab, FormControl, InputLabel, MenuItem, Select, Stack} from "@mui/material";
+import {Box, Divider, Fab, Stack} from "@mui/material";
 import '../css/lotto/common.css'
 import {AutoFixHighTwoTone} from "@mui/icons-material";
 import LottoNumber from "./LottoNumber";
@@ -50,7 +50,7 @@ export default function RecommendedLottoCard() {
                     </IconButton>
                 }
                 title="로또 번호 추천"
-                subheader="최근 가장 나오지 않았던 번호 랜덤 추첨"
+                subheader="ex)최근 가장 나오지 않았던 번호 랜덤 추첨"
             />
             <CardContent>
                 <Box>
@@ -90,64 +90,6 @@ export default function RecommendedLottoCard() {
                 <CardContent>
                     <Box>
                         <Stack spacing={2}>
-                            <Stack spacing={1}  direction={{ xs: 'column', sm: 'row' }}>
-                                <Typography variant="caption">최근</Typography>
-                                <Box sx={{ minWidth: {xs: 80, sm: 120} }}>
-                                    <FormControl fullWidth>
-                                    <InputLabel id="demo-simple-select-label">몇회</InputLabel>
-                                    <Select
-                                        labelId="demo-simple-select-label"
-                                        id="demo-simple-select"
-                                        //value={age}
-                                        label="Age"
-                                        //onChange={handleChange}
-                                    >
-                                        <MenuItem value={5}>5회</MenuItem>
-                                        <MenuItem value={4}>4회</MenuItem>
-                                        <MenuItem value={3}>3회</MenuItem>
-                                        <MenuItem value={2}>2회</MenuItem>
-                                        <MenuItem value={1}>1회</MenuItem>
-                                    </Select>
-                                </FormControl>
-                                </Box>
-                                <Typography variant="caption">동안</Typography>
-                                <Box sx={{ minWidth: {xs: 80, sm: 120} }}>
-                                    <FormControl fullWidth>
-                                        <InputLabel id="demo-simple-select-label">출현</InputLabel>
-                                        <Select
-                                            labelId="demo-simple-select-label"
-                                            id="demo-simple-select"
-                                            //value={age}
-                                            label="Age"
-                                            //onChange={handleChange}
-                                        >
-                                            <MenuItem value={1}>안나온</MenuItem>
-                                            <MenuItem value={2}>많이나온</MenuItem>
-                                            <MenuItem value={3}>랜덤</MenuItem>
-                                        </Select>
-                                    </FormControl>
-                                </Box>
-                                <Typography variant="caption">번호</Typography>
-                                <Box sx={{ minWidth: {xs: 80, sm: 120} }}>
-                                    <FormControl fullWidth>
-                                        <InputLabel id="demo-simple-select-label">갯수</InputLabel>
-                                        <Select
-                                            labelId="demo-simple-select-label"
-                                            id="demo-simple-select"
-                                            //value={age}
-                                            label="Age"
-                                            //onChange={handleChange}
-                                        >
-                                            <MenuItem value={1}>1개</MenuItem>
-                                            <MenuItem value={2}>2개</MenuItem>
-                                            <MenuItem value={3}>3개</MenuItem>
-                                            <MenuItem value={4}>4개</MenuItem>
-                                            <MenuItem value={5}>5개</MenuItem>
-                                            <MenuItem value={6}>6개</MenuItem>
-                                        </Select>
-                                    </FormControl>
-                                </Box>
-                            </Stack>
                             <Box>
                                 <Fab variant="extended" color="primary">
                                     <AutoFixHighTwoTone />
@@ -165,6 +107,9 @@ export default function RecommendedLottoCard() {
                                     <Avatar className="winning-numbers">33</Avatar>
                                     <Avatar className="winning-numbers">45</Avatar>
                                 </Stack>
+                                <Typography variant="subtitle2">
+                                    (6개의 랜덤 번호)
+                                </Typography>
                             </Stack>
                         </Stack>
                     </Box>
