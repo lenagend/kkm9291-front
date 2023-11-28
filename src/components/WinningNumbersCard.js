@@ -19,6 +19,8 @@ import {useFetchPaginatedData} from "../hooks/useFetchPaginatedData";
 import {useEffect, useState} from "react";
 import LottoNumber from "./LottoNumber";
 import {formatKoreanDate} from "../utils/formatDate";
+import {Download} from "@mui/icons-material";
+import {htmlToImageDownloader} from "../utils/DownloadUtils";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -58,11 +60,11 @@ export default function WinningNumbersCard() {
     }
 
     return (
-        <Card sx={{ maxWidth: 'auto', m: 2 }}>
+        <Card sx={{ maxWidth: 'auto', m: 2 }} id="winningNumbersCard">
             <CardHeader
                 avatar={
-                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        로또
+                    <Avatar sx={{ bgcolor: red[500], fontSize: 14 }} aria-label="recipe">
+                        Lotto
                     </Avatar>
                 }
                 action={
@@ -91,8 +93,8 @@ export default function WinningNumbersCard() {
                 <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
                 </IconButton>
-                <IconButton aria-label="share">
-                    <ShareIcon />
+                <IconButton aria-label="share" onClick={() => htmlToImageDownloader('winningNumbersCard')}>
+                    <Download />
                 </IconButton>
                 <Stack direction="row" sx={{marginLeft : 'auto'}}>
                     <Box sx={{display : 'flex', alignItems : 'center'}}>

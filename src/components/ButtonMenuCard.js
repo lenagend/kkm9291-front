@@ -12,7 +12,7 @@ export default function ButtonMenuCard() {
     const navigate = useNavigate();
     const menuItems = [
         { label: '로또', path: '/lotto', color: '#f06292' },
-        { label: '닉네임생성기', path: '/info',  color: '#ec407a' },
+        { label: '모의뱅킹', path: '/info',  color: '#ec407a' },
         // ... 추가 메뉴 아이템
     ];
     const handleButtonClick = (path) => {

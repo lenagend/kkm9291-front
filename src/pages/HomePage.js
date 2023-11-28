@@ -1,6 +1,6 @@
 import {Box, Container} from "@mui/material";
 import WinningNumbersCard from "../components/WinningNumbersCard";
-import RecommendedLottoCard from "../components/RecommendedLottoCard";
+import RecommendedNumbersCard from "../components/RecommendedNumbersCard";
 import ButtonMenuCard from "../components/ButtonMenuCard";
 
 const HomePage = () => {
@@ -9,7 +9,7 @@ const HomePage = () => {
         <Container maxWidth="sm">
             <ButtonMenuCard />
             <WinningNumbersCard />
-            <RecommendedLottoCard />
+            <RecommendedNumbersCard />
         </Container>
         </Box>
     )
