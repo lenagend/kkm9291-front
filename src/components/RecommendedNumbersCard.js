@@ -32,7 +32,7 @@ const ExpandMore = styled((props) => {
 
 export default function RecommendedNumbersCard() {
     const [expanded, setExpanded] = React.useState(false);
-    const apiUrl = process.env.REACT_APP_API_URL;
+    const apiUrl = process.env.REACT_APP_API_URL ?  process.env.REACT_APP_API_URL : "http://127.0.0.1:8080";
     const [currentPage, setCurrentPage] = useState(0);
     const { data: recommendedNumbersData, loading } = useFetchPaginatedData(`${apiUrl}/api/lotto/recommend`, currentPage, 30, "createdAt,desc");
     const [latestRecommend, setLatestRecommend] = useState(null);
