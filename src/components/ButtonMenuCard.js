@@ -11,8 +11,8 @@ import { useNavigate } from "react-router-dom";
 export default function ButtonMenuCard() {
     const navigate = useNavigate();
     const menuItems = [
-        { label: '로또', path: '/lotto', color: '#f06292' },
-        { label: '모의뱅킹', path: '/info',  color: '#ec407a' },
+        { label: 'about Me', path: '/info',  color: '#ec407a' },
+        { label: '로또번호 추천', path: '/lotto', color: '#f06292' },
         // ... 추가 메뉴 아이템
     ];
     const handleButtonClick = (path) => {
