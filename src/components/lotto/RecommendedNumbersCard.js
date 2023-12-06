@@ -18,6 +18,7 @@ import LottoNumber from "./LottoNumber";
 import {useEffect, useState} from "react";
 import {useFetchPaginatedData} from "../../hooks/useFetchPaginatedData";
 import {htmlToImageDownloader} from "../../utils/DownloadUtils";
+import LoadingCard from "../loading/LoadingCard";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -80,15 +81,11 @@ export default function RecommendedNumbersCard() {
     }, [recommendedNumbersData]);
 
     if(loading || !latestRecommend){
-        return (
-            <Card sx={{ maxWidth: 'auto', m: 2 }}>
-                <CircularProgress />
-            </Card>
-        );
+        return <LoadingCard />;
     }
 
     return (
-        <Card sx={{ maxWidth: 'auto', m: 2 }} id="recommendedNumbersCard">
+        <Card sx={{ maxWidth: 'auto', mt: 2 }} id="recommendedNumbersCard">
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500], fontSize: 14 }} aria-label="recipe">

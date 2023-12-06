@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import {red} from '@mui/material/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {Box, CircularProgress, Pagination, Stack} from "@mui/material";
+import {Box, Pagination, Stack} from "@mui/material";
 import '../../css/lotto/common.css'
 import {useFetchPaginatedData} from "../../hooks/useFetchPaginatedData";
 import {useEffect, useState} from "react";
@@ -19,6 +19,7 @@ import LottoNumber from "./LottoNumber";
 import {formatKoreanDate} from "../../utils/formatDate";
 import {Download} from "@mui/icons-material";
 import {htmlToImageDownloader} from "../../utils/DownloadUtils";
+import LoadingCard from "../loading/LoadingCard";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -50,15 +51,11 @@ export default function WinningNumbersCard() {
     };
 
     if(loading || !latestDraw){
-        return (
-            <Card sx={{ maxWidth: 'auto', m: 2 }}>
-                <CircularProgress />
-            </Card>
-        );
+        return <LoadingCard />;
     }
 
     return (
-        <Card sx={{ maxWidth: 'auto', m: 2 }} id="winningNumbersCard">
+        <Card sx={{ maxWidth: 'auto', mt: 2 }} id="winningNumbersCard">
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500], fontSize: 14 }} aria-label="recipe">

@@ -2,16 +2,12 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {Box, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
@@ -37,7 +33,7 @@ export default function ProfileCard() {
     };
 
     return (
-        <Card sx={{ maxWidth: 'auto', m: 2 }} id="profileCard">
+        <Card sx={{ maxWidth: 'auto', mt: 2 }} id="profileCard">
             <CardHeader
                 avatar={
                     <Avatar alt="김광민" src="/images/kkm.jpg"/>
@@ -72,7 +68,7 @@ export default function ProfileCard() {
                         <Table  size="small" aria-label="a dense table">
                             <TableHead>
                                 <TableRow>
-                                    <TableCell>회사명</TableCell>
+                                    <TableCell>업무</TableCell>
                                     <TableCell>기간</TableCell>
                                 </TableRow>
                             </TableHead>

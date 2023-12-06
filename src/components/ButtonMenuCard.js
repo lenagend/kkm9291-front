@@ -19,7 +19,7 @@ export default function ButtonMenuCard() {
         navigate(path);
     };
     return (
-        <Card sx={{ maxWidth: 'auto', m: 2 }}>
+        <Card sx={{ maxWidth: 'auto', mt: 2 }}>
             <CardMedia
                 sx={{ height: 140 }}
                 image="/images/cloudy.jpg"
