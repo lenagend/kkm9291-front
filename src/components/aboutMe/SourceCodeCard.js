@@ -47,7 +47,7 @@ export default function SourceCodeCard() {
     }
 
     return (
-        <Card sx={{ maxWidth: 'auto', mt: 2 }} id="techStackCard">
+        <Card sx={{ maxWidth: 'auto', mt: 2 }} id="sourceCodeCard">
             <CardHeader
                 avatar={
                     <Avatar sx={{bgcolor: pink[500]}}>
@@ -91,7 +91,7 @@ export default function SourceCodeCard() {
                 </Card>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="share" onClick={() => {htmlToImageDownloader('techStackCard')}}>
+                <IconButton aria-label="share" onClick={() => {htmlToImageDownloader('sourceCodeCard')}}>
                     <Download />
                 </IconButton>
                 <Button

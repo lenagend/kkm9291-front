@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {Box, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
-import {CalendarToday, Download, Email, Phone, School, Work} from "@mui/icons-material";
+import {CalendarToday, Download, Email, Face6, Phone, School, Work} from "@mui/icons-material";
 import {htmlToImageDownloader} from "../../utils/DownloadUtils";
 
 const ExpandMore = styled((props) => {
@@ -106,19 +106,20 @@ export default function ProfileCard() {
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Typography paragraph>성격:</Typography>
-                    <Typography paragraph>
-                       블라블라
-                    </Typography>
-                    <Typography paragraph>
-                        블라블라블라~
-                    </Typography>
-                    <Typography paragraph>
-                        이러저러해서
-                    </Typography>
-                    <Typography>
-                        마무리
-                    </Typography>
+                    <Stack spacing={2}>
+                        <Stack direction="row" spacing={0.5} >
+                            <Face6/>
+                            <Typography variant="body1" display="block" sx={{fontSize: '1rem', textAlign: 'left'}} gutterBottom>
+                                안녕하세요! 웹 개발자 김광민입니다.
+                                <br/>
+                                <br/>
+                                작가가 만화를 그리고, 소설을 쓰듯이, 머릿속에 떠오른 것을 브라우져안에 표현할 수 있는 것에 매력을 느껴 개발자가 되었습니다.
+                                <br/>
+                                <br/>
+                                신기술로 더욱 생산적인 코드를 작성하는 것을 선호하며, 원하는 결과를 낼 때까지 포기하지 않는 열정은 누구보다 자신 있습니다.
+                            </Typography>
+                        </Stack>
+                    </Stack>
                 </CardContent>
             </Collapse>
         </Card>

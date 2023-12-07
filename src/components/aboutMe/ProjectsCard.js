@@ -11,23 +11,22 @@ import {htmlToImageDownloader} from "../../utils/DownloadUtils";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Button from "@mui/material/Button";
 import {openUrlInNewTab} from "../../utils/navigationUtils";
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import '../../css/swiper/common.css'
-import LottoProjectCard from "./projects/GwangjinProjectCard";
 import GwangjinProjectCard from "./projects/GwangjinProjectCard";
 import SungbukProjectCard from "./projects/SungbukProjectCard";
-import {Box} from "@mui/material";
+import LottoProjectCard from "./projects/LottoProjectCard";
 
 export default function ProjectsCard() {
     const [expanded, setExpanded] = React.useState(false);
 
     return (
-        <Card sx={{ maxWidth: 'auto', mt: 2 }} id="techStackCard">
+        <Card sx={{ maxWidth: 'auto', mt: 2 }} id="projectsCard">
             <CardHeader
                 avatar={
                     <Avatar sx={{bgcolor: purple[500]}}>
@@ -67,12 +66,9 @@ export default function ProjectsCard() {
 
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="share" onClick={() => {htmlToImageDownloader('techStackCard')}}>
+                <IconButton aria-label="share" onClick={() => {htmlToImageDownloader('projectsCard')}}>
                     <Download />
                 </IconButton>
-                <Button
-                    onClick={() => openUrlInNewTab('https://github.com/lenagend')}
-                    sx={{marginLeft: 'auto', marginRight: '1rem', fontWeight: 'bold'}}>깃허브에서 더보기...</Button>
             </CardActions>
         </Card>
     );

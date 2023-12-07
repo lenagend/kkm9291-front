@@ -32,32 +32,34 @@ export default function TechStackCard() {
                 subheader="Tech stack"
             />
             <CardContent>
+            <Stack spacing={2}>
                 <Stack spacing={2}>
                     <Typography variant="h5" textAlign="left"><AutoAwesome/>Backend</Typography>
                     <Stack direction={{ sm: 'row' }} width={{ xs: '50%'}}  spacing={{xs: 2, sm: 1}}>
-                        <img alt="springbootBadge" src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=Spring%20Boot&logoColor=white"/>
-                        <img alt="springBadge" src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"/>
-                        <img alt="javaBadge" src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=OpenJDK&logoColor=white"/>
-                        <img alt="pythonBadge" src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+                        <img alt="springbootBadge" src="/images/techStacks/Spring Boot-6DB33F.svg"/>
+                        <img alt="springBadge" src="/images/techStacks/Spring-6DB33F.svg"/>
+                        <img alt="javaBadge" src="/images/techStacks/Java-007396.svg"/>
+                        <img alt="pythonBadge" src="/images/techStacks/python-3776AB.svg"/>
                     </Stack>
                     <Typography variant="h5" textAlign="left"><AutoAwesome/>Frontend</Typography>
                     <Stack direction={{ sm: 'row' }} width={{ xs: '50%'}}  spacing={{xs: 2, sm: 1}}>
-                        <img alt="reactBadge" src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
-                        <img alt="javascriptBadge" src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-                        <img alt="jqueryBadge" src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white"/>
-                        <img alt="html5Badge" src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+                        <img alt="reactBadge" src="/images/techStacks/react-61DAFB.svg"/>
+                        <img alt="javascriptBadge" src="/images/techStacks/javascript-F7DF1E.svg"/>
+                        <img alt="jqueryBadge" src="/images/techStacks/jQuery-0769AD.svg"/>
+                        <img alt="html5Badge" src="/images/techStacks/html5-E34F26.svg"/>
                     </Stack>
                     <Typography variant="h5" textAlign="left"><AutoAwesome/>Data</Typography>
                     <Stack direction={{ sm: 'row' }} width={{ xs: '50%'}}  spacing={{xs: 2, sm: 1}}>
-                        <img alt="oracleBadge" src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"/>
-                        <img alt="mysqlBadge" src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+                        <img alt="oracleBadge" src="/images/techStacks/oracle-F80000.svg"/>
+                        <img alt="mysqlBadge" src="/images/techStacks/mysql-4479A1.svg"/>
                     </Stack>
                     <Typography variant="h5" textAlign="left"><AutoAwesome/>Service</Typography>
                     <Stack direction={{ sm: 'row' }} width={{ xs: '50%'}}  spacing={{xs: 2, sm: 1}}>
-                        <img alt="oracleBadge" src="https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"/>
-                        <img alt="mysqlBadge" src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
+                        <img alt="awsBadge" src="/images/techStacks/amazonaws-232F3E.svg"/>
+                        <img alt="linuxBadge" src="/images/techStacks/linux-FCC624.svg"/>
                     </Stack>
                 </Stack>
+            </Stack>
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="share" onClick={() => {htmlToImageDownloader('techStackCard')}}>
