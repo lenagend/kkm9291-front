@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import {purple} from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {openUrlInNewTab} from "../../../utils/navigationUtils";
+import {openUrlInNewTab} from "../../../commons/utils/navigationUtils";
 import Button from "@mui/material/Button";
 import {Stack} from "@mui/material";
 import {Folder, Looks3, LooksOne, LooksTwo} from "@mui/icons-material";

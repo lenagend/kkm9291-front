@@ -1,7 +1,7 @@
 import {Box, Container} from "@mui/material";
-import WinningNumbersCard from "../components/lotto/WinningNumbersCard";
-import RecommendedNumbersCard from "../components/lotto/RecommendedNumbersCard";
-import ButtonMenuCard from "../components/ButtonMenuCard";
+import WinningNumbersCard from "../../lotto/components/WinningNumbersCard";
+import RecommendedNumbersCard from "../../lotto/components/RecommendedNumbersCard";
+import ButtonMenuCard from "../components/menu/ButtonMenuCard";
 
 const HomePage = () => {
     return(

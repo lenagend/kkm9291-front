@@ -9,10 +9,11 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import {purple} from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {openUrlInNewTab} from "../../../utils/navigationUtils";
+import {openUrlInNewTab} from "../../../commons/utils/navigationUtils";
 import Button from "@mui/material/Button";
 import {Stack} from "@mui/material";
 import {Campaign, Folder, Looks3, Looks4, Looks5, LooksOne, LooksTwo} from "@mui/icons-material";
+import {Link} from "@mui/joy";
 
 
 export default function LottoProjectCard() {
@@ -89,9 +90,9 @@ export default function LottoProjectCard() {
                 </Stack>
             </CardContent>
             <CardActions disableSpacing>
-                <Button
-                    onClick={() => openUrlInNewTab('/lotto')}
-                    sx={{marginLeft: 'auto', marginRight: '1rem', fontWeight: 'bold'}}>Site로 이동...</Button>
+                <Link href="/lotto" variant="solid" color="primary" sx={{marginLeft: 'auto', marginRight: '1rem'}}>
+                    Site로 이동
+                </Link>
             </CardActions>
         </Card>
     );

@@ -15,14 +15,14 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import Divider from '@mui/material/Divider';
 
 import {Code, Download, NearMe} from "@mui/icons-material";
-import {htmlToImageDownloader} from "../../utils/DownloadUtils";
+import {htmlToImageDownloader} from "../../commons/utils/DownloadUtils";
 import {useEffect, useState} from "react";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import LoadingCard from "../loading/LoadingCard";
+import LoadingCard from "../../commons/components/loading/LoadingCard";
 import Button from "@mui/material/Button";
 import {Box} from "@mui/material";
-import {formatKoreanDate} from "../../utils/formatDate";
-import {openUrlInNewTab} from "../../utils/navigationUtils";
+import {formatKoreanDate} from "../../commons/utils/formatDate";
+import {openUrlInNewTab} from "../../commons/utils/navigationUtils";
 
 export default function SourceCodeCard() {
     const [repos, setRepos] = useState([]);

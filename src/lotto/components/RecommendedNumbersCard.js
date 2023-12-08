@@ -11,14 +11,14 @@ import Typography from '@mui/material/Typography';
 import { red} from '@mui/material/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import {Box, CircularProgress, Divider, Fab, Stack} from "@mui/material";
-import '../../css/lotto/common.css'
+import {Box, Divider, Fab, Stack} from "@mui/material";
+import '../css/common.css'
 import {AutoFixHighTwoTone, Download} from "@mui/icons-material";
 import LottoNumber from "./LottoNumber";
 import {useEffect, useState} from "react";
-import {useFetchPaginatedData} from "../../hooks/useFetchPaginatedData";
-import {htmlToImageDownloader} from "../../utils/DownloadUtils";
-import LoadingCard from "../loading/LoadingCard";
+import {useFetchPaginatedData} from "../../commons/hooks/useFetchPaginatedData";
+import {htmlToImageDownloader} from "../../commons/utils/DownloadUtils";
+import LoadingCard from "../../commons/components/loading/LoadingCard";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;

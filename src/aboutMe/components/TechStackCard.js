@@ -10,7 +10,7 @@ import {deepPurple} from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Stack } from "@mui/material";
 import {AutoAwesome, Download, Layers} from "@mui/icons-material";
-import {htmlToImageDownloader} from "../../utils/DownloadUtils";
+import {htmlToImageDownloader} from "../../commons/utils/DownloadUtils";
 
 
 export default function TechStackCard() {

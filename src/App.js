@@ -1,8 +1,8 @@
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import LottoPage from "./pages/LottoPage";
-import AboutMePage from "./pages/AboutMePage";
+import HomePage from "./commons/pages/HomePage";
+import LottoPage from "./lotto/pages/LottoPage";
+import AboutMePage from "./aboutMe/pages/AboutMePage";
 
 function App() {
   return (

@@ -12,14 +12,14 @@ import {red} from '@mui/material/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {Box, Pagination, Stack} from "@mui/material";
-import '../../css/lotto/common.css'
-import {useFetchPaginatedData} from "../../hooks/useFetchPaginatedData";
+import '../css/common.css'
+import {useFetchPaginatedData} from "../../commons/hooks/useFetchPaginatedData";
 import {useEffect, useState} from "react";
 import LottoNumber from "./LottoNumber";
-import {formatKoreanDate} from "../../utils/formatDate";
+import {formatKoreanDate} from "../../commons/utils/formatDate";
 import {Download} from "@mui/icons-material";
-import {htmlToImageDownloader} from "../../utils/DownloadUtils";
-import LoadingCard from "../loading/LoadingCard";
+import {htmlToImageDownloader} from "../../commons/utils/DownloadUtils";
+import LoadingCard from "../../commons/components/loading/LoadingCard";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;

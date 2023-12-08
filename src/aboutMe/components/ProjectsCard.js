@@ -7,23 +7,20 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import { purple} from '@mui/material/colors';
 import {Download, FolderCopy} from "@mui/icons-material";
-import {htmlToImageDownloader} from "../../utils/DownloadUtils";
+import {htmlToImageDownloader} from "../../commons/utils/DownloadUtils";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import Button from "@mui/material/Button";
-import {openUrlInNewTab} from "../../utils/navigationUtils";
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import '../../css/swiper/common.css'
+import '../../commons/css/swiper/common.css'
 import GwangjinProjectCard from "./projects/GwangjinProjectCard";
 import SungbukProjectCard from "./projects/SungbukProjectCard";
 import LottoProjectCard from "./projects/LottoProjectCard";
 
 export default function ProjectsCard() {
-    const [expanded, setExpanded] = React.useState(false);
 
     return (
         <Card sx={{ maxWidth: 'auto', mt: 2 }} id="projectsCard">
@@ -38,8 +35,8 @@ export default function ProjectsCard() {
                         <MoreVertIcon />
                     </IconButton>
                 }
-                title="프로젝트&깃허브"
-                subheader="Project&Github"
+                title="프로젝트"
+                subheader="Project"
             />
             <CardContent>
                         <Swiper

@@ -12,7 +12,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {Box, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
 import {CalendarToday, Download, Email, Face6, Phone, School, Work} from "@mui/icons-material";
-import {htmlToImageDownloader} from "../../utils/DownloadUtils";
+import {htmlToImageDownloader} from "../../commons/utils/DownloadUtils";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -36,7 +36,7 @@ export default function ProfileCard() {
         <Card sx={{ maxWidth: 'auto', mt: 2 }} id="profileCard">
             <CardHeader
                 avatar={
-                    <Avatar alt="김광민" src="/images/kkm.jpg"/>
+                    <Avatar alt="김광민" src="/images/kkm.jpg" sx={{ width: 56, height: 56 }}/>
                 }
                 action={
                     <IconButton aria-label="settings">
